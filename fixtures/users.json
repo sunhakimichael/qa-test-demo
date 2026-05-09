@@ -1,0 +1,36 @@
+{
+  "password": "secret_sauce",
+  "users": [
+    {
+      "username": "standard_user",
+      "expectedOutcome": "success",
+      "description": "Standard user — should log in and reach Products page"
+    },
+    {
+      "username": "locked_out_user",
+      "expectedOutcome": "error",
+      "expectedErrorMessage": "Epic sadface: Sorry, this user has been locked out.",
+      "description": "Locked out user — should see lock-out error message"
+    },
+    {
+      "username": "problem_user",
+      "expectedOutcome": "success",
+      "description": "Problem user — logs in but has known UI issues"
+    },
+    {
+      "username": "performance_glitch_user",
+      "expectedOutcome": "success",
+      "description": "Performance glitch user — logs in with intentional delay"
+    },
+    {
+      "username": "error_user",
+      "expectedOutcome": "success",
+      "description": "Error user — logs in but some actions trigger errors"
+    },
+    {
+      "username": "visual_user",
+      "expectedOutcome": "success",
+      "description": "Visual user — logs in but has visual layout issues"
+    }
+  ]
+}

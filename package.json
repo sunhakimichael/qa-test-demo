@@ -1,0 +1,30 @@
+{
+  "name": "saucedemo-playwright",
+  "version": "1.0.0",
+  "description": "Automated test suite for SauceDemo using Playwright + TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:cart": "playwright test tests/cart.spec.ts",
+    "test:checkout": "playwright test tests/checkout.spec.ts",
+    "report:html": "playwright show-report",
+    "report:allure": "allure serve allure-results",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.0",
+    "allure-playwright": "^3.0.0",
+    "typescript": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.30.0"
+  }
+}
